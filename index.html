@@ -3,103 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucknow Model Public School | Hasanganj Unnao</title>
+    <title>Lucknow Model Public School | Awagojha Hasanganj</title>
     <style>
-        /* [CSS styles remain consistent for layout, responsiveness, and design] */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
-        header { background: #002147; color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .logo-area h1 { font-size: 24px; font-weight: bold; color: #ffcc00; text-transform: uppercase; letter-spacing: 1px; }
-        .logo-area p { font-size: 12px; color: #fff; opacity: 0.9; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; font-size: 15px; transition: 0.3s; }
+        /* R S Convent Style Premium Theme */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', Arial, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; }
+        
+        /* Top Utility Bar */
+        .top-bar { background: #ffcc00; color: #002147; padding: 8px 5%; font-size: 13px; font-weight: 600; display: flex; justify-content: space-between; }
+        
+        /* Navigation Header */
+        header { background: #002147; color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .logo-area h1 { font-size: 24px; font-weight: 800; color: #ffcc00; letter-spacing: 0.5px; }
+        .logo-area p { font-size: 11px; opacity: 0.8; color: #fff; }
+        nav { display: flex; align-items: center; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; font-size: 14px; transition: 0.3s; text-transform: uppercase; }
         nav a:hover { color: #ffcc00; }
-        .hero { background: linear-gradient(rgba(0,33,71,0.8), rgba(0,33,71,0.8)), url('https://unsplash.com') no-gradient; background-size: cover; background-position: center; color: white; padding: 100px 5%; text-align: center; }
-        .hero h2 { font-size: 42px; margin-bottom: 15px; color: #fff; font-weight: 800; }
-        .hero p { font-size: 18px; margin-bottom: 25px; max-width: 800px; margin-left: auto; margin-right: auto; color: #e0e0e0; }
-        .btn { background: #ffcc00; color: #002147; padding: 12px 30px; font-weight: bold; border-radius: 25px; text-decoration: none; font-size: 16px; transition: 0.3s; display: inline-block; box-shadow: 0 4px 15px rgba(255,204,0,0.4); margin: 5px; }
-        .btn:hover { background: white; color: #002147; transform: translateY(-2px); }
-        .btn-secondary { background: #fff; color: #002147; border: 2px solid #fff; }
-        .alert-box { background: #fff3cd; border-left: 5px solid #ffc107; padding: 20px; margin: 30px 5%; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .alert-box h3 { color: #856404; font-size: 22px; margin-bottom: 8px; }
-        .alert-box p { font-size: 16px; color: #664d03; font-weight: 600; }
+        
+        /* Notice Ticker (Latest Updates Line) */
+        .ticker-wrap { background: #e31e24; color: white; padding: 10px 5%; font-weight: bold; overflow: hidden; white-space: nowrap; box-shadow: inset 0 -2px 5px rgba(0,0,0,0.2); }
+        .ticker { display: inline-block; padding-left: 100%; animation: marquee 25s linear infinite; }
+        @keyframes marquee { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+        /* Premium Image Slider Section */
+        .slider-box { position: relative; width: 100%; height: 450px; overflow: hidden; background: #000; }
+        .slide { position: absolute; width: 100%; height: 100%; opacity: 0; animation: sliderEffect 15s infinite; background-size: cover; background-position: center; }
+        /* Placeholder Images that look highly professional */
+        .slide:nth-child(1) { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com'); animation-delay: 0s; opacity: 1; }
+        .slide:nth-child(2) { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com'); animation-delay: 5s; }
+        .slide:nth-child(3) { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com'); animation-delay: 10s; }
+        @keyframes sliderEffect {
+            0%, 33.33% { opacity: 1; }
+            38.33%, 95% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .slide-text { position: absolute; bottom: 50px; left: 5%; color: white; max-width: 600px; z-index: 10; }
+        .slide-text h2 { font-size: 38px; color: #ffcc00; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); margin-bottom: 10px; font-weight: 800; }
+        .slide-text p { font-size: 16px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+
+        /* Main Content Styling */
         .section { padding: 60px 5%; }
-        .section-title { text-align: center; font-size: 32px; color: #002147; margin-bottom: 40px; font-weight: 700; position: relative; }
-        .section-title::after { content: ''; width: 60px; height: 4px; background: #ffcc00; display: block; margin: 10px auto 0; border-radius: 2px; }
-        .management-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 20px; }
-        .member-card { background: white; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .member-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid #ffcc00; background-color: #eee; }
-        .member-card h3 { color: #002147; font-size: 22px; margin-bottom: 5px; }
-        .member-card .role { color: #ffcc00; font-weight: bold; background: #002147; display: inline-block; padding: 3px 15px; border-radius: 15px; font-size: 14px; margin-bottom: 15px; }
-        .member-card p { color: #555; font-size: 15px; font-style: italic; text-align: justify; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .gallery-item { border-radius: 8px; overflow: hidden; height: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); background-color: #ddd; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
-        .gallery-item img:hover { transform: scale(1.05); }
-        .table-container { overflow-x: auto; max-width: 800px; margin: 0 auto; }
-        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
-        th { background: #002147; color: white; }
-        tr:hover { background: #f8f9fa; }
-        .about-grid { display: flex; gap: 40px; align-items: center; justify-content: space-between; }
-        .about-text { flex: 1; }
-        .about-text p { margin-bottom: 15px; font-size: 16px; color: #555; text-align: justify; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 4px solid #002147; transition: 0.3s; text-align: center; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .card h3 { color: #002147; margin-bottom: 12px; font-size: 20px; }
-        .card p { color: #666; font-size: 14.5px; }
-        footer { background: #00152e; color: #a0aec0; padding: 40px 5%; font-size: 14px; text-align: center; border-top: 5px solid #ffcc00; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: left; max-width: 1200px; margin: 0 auto 30px; }
-        .footer-col h4 { color: white; font-size: 18px; margin-bottom: 15px; font-weight: 600; }
-        .footer-col p { margin-bottom: 10px; }
-        .footer-bottom { border-top: 1px solid #2d3748; padding-top: 20px; color: #718096; font-size: 13px; }
+        .bg-white { background: #fff; }
+        .section-title { text-align: center; font-size: 32px; color: #002147; margin-bottom: 15px; font-weight: 700; position: relative; text-transform: uppercase; }
+        .section-subtitle { text-align: center; color: #666; font-size: 15px; margin-bottom: 40px; }
+        .section-title::after { content: ''; width: 50px; height: 3px; background: #e31e24; display: block; margin: 10px auto 0; }
+
+        /* Management Grid (R S Convent Style) */
+        .management-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .msg-box { background: #fff; border-radius: 8px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); text-align: center; border-bottom: 5px solid #002147; transition: 0.3s; }
+        .msg-box:hover { transform: translateY(-5px); }
+        .avatar { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; border: 4px solid #ffcc00; background: #f0f0f0; }
+        .msg-box h3 { color: #002147; font-size: 20px; margin-bottom: 5px; }
+        .msg-box h5 { color: #e31e24; font-size: 13px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .msg-box p { font-size: 14.5px; color: #555; line-height: 1.6; text-align: justify; font-style: italic; }
+
+        /* Focus Features Grid */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .feature-card { background: white; padding: 25px 20px; text-align: center; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); border-left: 4px solid #ffcc00; transition: 0.3s; }
+        .feature-card:hover { background: #002147; color: white; }
+        .feature-card h4 { font-size: 18px; margin-bottom: 8px; color: #002147; }
+        .feature-card:hover h4 { color: #ffcc00; }
+        .feature-card p { font-size: 13.5px; color: #666; }
+        .feature-card:hover p { color: #ddd; }
+
+        /* Premium Photo Gallery Section */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .gallery-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .gallery-img-wrapper { width: 100%; height: 210px; overflow: hidden; background: #e2e8f0; }
+        .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
+        .gallery-card img:hover { transform: scale(1.06); }
+        .gallery-details { padding: 15px; border-top: 3px solid #ffcc00; }
+        .gallery-details h4 { color: #002147; font-size: 16px; margin-bottom: 5px; }
+        .gallery-details p { color: #e31e24; font-size: 12px; font-weight: bold; }
+
+        /* Teacher Grid Section */
+        .teacher-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; }
+        .teacher-card { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #e31e24; }
+        .teacher-card h4 { color: #002147; font-size: 17px; margin-bottom: 4px; }
+        .teacher-card p { color: #666; font-size: 13px; font-weight: 500; }
+
+        /* Main Footer Area */
+        footer { background: #001226; color: #b5c2d1; padding: 40px 5% 20px; font-size: 14px; border-top: 4px solid #e31e24; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; text-align: left; max-width: 1200px; margin: 0 auto 30px; }
+        .footer-col h4 { color: white; font-size: 17px; margin-bottom: 15px; font-weight: 600; border-bottom: 2px solid #ffcc00; display: inline-block; padding-bottom: 4px; }
+        .footer-col p { margin-bottom: 8px; line-height: 1.5; }
+        .footer-bottom { border-top: 1px solid #1a2e44; padding-top: 20px; text-align: center; font-size: 12.5px; color: #718096; }
+
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; padding: 15px; }
-            nav { margin-top: 15px; }
-            nav a { margin: 0 10px; font-size: 14px; }
-            .hero h2 { font-size: 30px; }
-            .about-grid { flex-direction: column; }
+            header { flex-direction: column; text-align: center; padding: 12px; }
+            nav { margin-top: 12px; flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 5px 10px; font-size: 13px; }
+            .slider-box { height: 300px; }
+            .slide-text h2 { font-size: 24px; }
+            .slide-text p { font-size: 13px; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Utility Bar -->
+    <div class="top-bar">
+        <span>📍 Awagojha, Hasanganj, Unnao</span>
+        <span>📞 Helpdesk: +91 97942 54466</span>
+    </div>
+
+    <!-- Navigation Header Bar -->
     <header>
-        <div class="logo-area"><h1>LMPS Hasanganj</h1><p>Lucknow Model Public School • CBSE Board</p></div>
-        <nav><a href="#about">About</a><a href="#leadership">Leadership</a><a href="#facilities">Facilities</a><a href="#fees">Fees</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+        <div class="logo-area">
+            <h1>LMPS HAsanganj</h1>
+            <p>Lucknow Model Public School • Co-Educational Secondary Institute</p>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#management">Management</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <section class="hero">
-        <h2>Excellence in Education</h2>
-        <p>Providing a nurturing environment for academic excellence.</p>
-        <a href="tel:+919794254466" class="btn">Call Us</a>
-        <a href="#" class="btn btn-secondary">Apply Online</a>
-    </section>
-    <section class="section" id="leadership" style="background-color: #f8f9fa;">
-        <h2 class="section-title">Our School Management</h2>
-        <div class="management-grid">
-            <div class="member-card">
-                <img src="URL_OF_OWNER_PHOTO" alt="School Owner" class="member-img">
-                <h3>[Owner Name]</h3>
-                <span class="role">Manager & Founder</span>
-            </div>
-            <div class="member-card">
-                <img src="URL_OF_PRINCIPAL_PHOTO" alt="School Principal" class="member-img">
-                <h3>[Principal Name]</h3>
-                <span class="role">School Principal</span>
+
+    <!-- News Marquee Ticker Section -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            🔥 Admissions Open for Session 2026-27! | 🎁 Special Discount: NO Admission Fee for Girls & 50% OFF for Boys! | 📚 New academic batches running at their premium speed. Contact admission desk instantly.
+        </div>
+    </div>
+
+    <!-- Auto Sliding Banner Section -->
+    <div class="slider-box" id="home">
+        <div class="slide">
+            <div class="slide-text">
+                <h2>Welcome To LMPS</h2>
+                <p>We educate for bright futures. A place where academic excellence thrives and every single child belongs to leadership.</p>
             </div>
         </div>
-    </section>
-    <section class="section" id="fees">
-        <h2 class="section-title">Fee Structure</h2>
-        <div class="table-container">
-            <table><thead><tr><th>Class Groups</th><th>Fee</th></tr></thead><tbody><tr><td>Primary</td><td>Contact Us</td></tr></tbody></table>
+        <div class="slide">
+            <div class="slide-text">
+                <h2>Annual Distribution</h2>
+                <p>Supporting and highly motivating meritorious top performers with special annual school scholarship prizes.</p>
+            </div>
         </div>
-    </section>
-    <section class="section" id="gallery" style="background-color: #f0f4f8;">
-        <h2 class="section-title">Photo Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="PHOTO_URL_1" alt="Event 1"></div>
-            <div class="gallery-item"><img src="PHOTO_URL_2" alt="Event 2"></div>
+        <div class="slide">
+            <div class="slide-text">
+                <h2>Smart Digital Learning</h2>
+                <p>Equipped with highly interactive audiovisual modern classroom boards to make concepts extreme easy for kids.</p>
+            </div>
         </div>
-    </section>
-</body>
-</html>
+    </div>
+
+    <!-- Management Leaders Section -->
+    <section class="section" id="management">
+        <h2 class="section-title">Message From Leadership</h2>
+        <p class="section-subtitle">Guiding young minds with wisdom, passion, and high-end core educational updates</p>
+        <div class="management-container">
